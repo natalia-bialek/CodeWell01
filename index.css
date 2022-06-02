@@ -1,0 +1,276 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0px;
+}
+
+/* GLOBAL */
+
+body {
+    background-color: #F0EAE2;
+    font-family: 'Inter', sans-serif;
+    padding: 5%;
+    overflow: hidden;
+}
+
+section {
+    width: 100%;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #807f7e;
+    line-height: 22px;
+}
+
+.text--bold {
+    font-weight: 600;
+    color: black;
+}
+
+.text--yellow {
+    color: #F7B300;
+}
+
+.button--primary {
+    display: inline-block;
+    background-color: #143416;
+    color: white;
+    font-weight: 600;
+    padding: 20px 35px;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #807f7e;
+}
+
+.menu__container {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 80%;
+}
+
+.menu__links, .menu__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__links {
+    border-bottom: 2px solid #d7d7d7 ;
+    padding-bottom: 5px;
+}
+
+.links__item {
+    width: 50%;
+    list-style: none;
+    text-align: center;
+    margin: 5px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.links__item:hover, .links__item:focus, .sub-menu__item:hover, .sub-menu__item:focus {
+    background-color: #d8d8d8;
+    transition: background-color ease-in-out 0.15s;
+}
+
+a[role="button"], #logo, .links__item, .sub-menu__item {
+    cursor: pointer;
+}
+
+.hamburger--active {
+    display: block;
+}
+
+/* SUBMENU OF PRODUCTS */
+
+.menu__sub-menu {
+    position: absolute;
+    width: 350px;
+    background-color: #Fff;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 0 auto;
+    box-shadow: 0px 1px 10px rgb(169, 169, 169);
+    display: none;
+}
+
+.sub-menu--active {
+    display: inline;
+}
+
+.sub-menu__item {
+    list-style: none;
+    display: flex;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.sub-menu__icon {
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: auto;
+
+}
+
+.sub-menu__text {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* HERO SECTION */
+
+#section--hero {
+    margin-top: 5vw;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__text {
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.hero__icons {
+    display: flex;
+    align-items: center;
+    padding-right: 1vw;
+}
+
+.hero__icons span {
+    margin: 0 auto 0 10px;
+}
+
+.hero__image {
+    display: none;
+    max-height: 400px;
+}
+
+/* GRID SECTION */
+
+.section--grid {
+    text-align: center;
+}
+
+.grid__container {
+    display: grid;
+    max-width: 900px;
+    grid-template-columns: repeat(2, minmax(150px, 350px));
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 10px 20px;
+    margin: 25px auto;
+}
+
+.grid__element {
+    max-width: 100%;
+}
+
+
+/* TABLET VIEW */
+
+@media screen and (min-width: 768px) {
+
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .grid__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* DESKTOP VIEW */
+
+@media screen and (min-width: 1024px) {
+
+    body {
+        padding-top: 2vw;
+    }
+
+    section, nav  {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    .hero__text {
+        max-width: 550px;
+        margin: auto 0;
+    }
+
+    .hero__image {
+        display: inline;
+    }
+
+    #menu__icon {
+        display: none;
+    }
+
+    .menu__container {
+        background-color: transparent;
+        position: static;
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        max-width: none;
+        border-radius: 0;
+    }
+    
+    .menu__links, .menu__buttons {
+        flex-direction: row;
+    }
+    
+    .menu__links {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .links__item {
+        padding: 13px;
+        width: fit-content;
+        margin: 10px;
+    }
+
+}
